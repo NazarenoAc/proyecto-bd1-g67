@@ -1,0 +1,802 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+        "type": "Table",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "data": {
+          "label": "CLIENTE",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "4a67274f-d9b5-4135-abec-175457fe1da5",
+              "name": "dni_cliente",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "1a7abd9c-2529-4ef6-bd96-d075f6f38f0f",
+              "name": "nombre",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "7c94d1b4-b91a-44ae-8396-69563d8321ee",
+              "name": "apellido",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "3551903a-c322-4429-a8da-9ba99ac11c82",
+              "name": "num_telefono",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 144
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+        "type": "Table",
+        "position": {
+          "x": 700,
+          "y": 0
+        },
+        "data": {
+          "label": "INSTRUMENTO",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+              "name": "cod_instrumento",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "06335937-9134-4313-af32-c53bdbec9503",
+              "name": "nombre_instrumento",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "28074123-108e-49d4-99c7-c18eba05f0ce",
+              "name": "marca",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "a2af81e7-24de-4bfa-8ec7-039378e1529d",
+              "name": "categoria",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "9981e917-ef77-4133-99a8-791b589b9964",
+              "name": "precio",
+              "type": "DECIMAL",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "6a36294c-ce78-4220-b9b4-38b2140c2faa",
+              "name": "stock",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 196
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "1aec6386-fe47-4711-a272-e00ab87306bf",
+        "type": "Table",
+        "position": {
+          "x": 350,
+          "y": -350
+        },
+        "data": {
+          "label": "EMPLEADO",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "f5f035d4-c037-4f62-a472-804131fe22b6",
+              "name": "dni_empleado",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "006fe499-a485-486e-a6fd-73225af23805",
+              "name": "nombre",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "34d33bb8-9119-4c1b-af3e-6429451d5fcd",
+              "name": "apellido",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "b1471dd6-b55d-4c04-8e9f-b1c1d70095e1",
+              "name": "num_telefono",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 144
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "a496413e-e9f8-4bc0-b469-3aa2667a4779",
+        "type": "Table",
+        "position": {
+          "x": 0,
+          "y": -350
+        },
+        "data": {
+          "label": "VENDEDOR",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+              "name": "fk_EMPLEADO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "49e042e3-b4e9-4eea-90ff-52ca7394ac67",
+                "sourceTableId": "1aec6386-fe47-4711-a272-e00ab87306bf",
+                "columns": [
+                  {
+                    "id": "fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+                    "name": "dni_empleado",
+                    "type": "VARCHAR(n)"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 66
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "4e0831fe-a6e4-45c6-93c0-ad57d3c5bdc9",
+        "type": "Table",
+        "position": {
+          "x": 700,
+          "y": -350
+        },
+        "data": {
+          "label": "TECNICO",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+              "name": "fk_EMPLEADO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "438495d0-eca4-453e-8f42-4268b90b528c",
+                "sourceTableId": "1aec6386-fe47-4711-a272-e00ab87306bf",
+                "columns": [
+                  {
+                    "id": "fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+                    "name": "dni_empleado",
+                    "type": "VARCHAR(n)"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 66
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "f48b7a52-6330-4191-b412-9e81b3b9a326",
+        "type": "Table",
+        "position": {
+          "x": -400,
+          "y": 400
+        },
+        "data": {
+          "label": "COMPRA",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "3663dfe7-53fe-4529-8dec-27aa5f10318e",
+              "name": "cantidad",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "b1249cc7-2a64-4e35-93b5-b06a3c0a4fe3",
+              "name": "precio_unitario",
+              "type": "DECIMAL",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+              "name": "fk_CLIENTE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "1b672187-723e-4e19-b25d-cee5e50b8cfd",
+                "sourceTableId": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+                "columns": [
+                  {
+                    "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+                    "name": "dni_cliente",
+                    "type": "VARCHAR(n)"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+              "name": "fk_INSTRUMENTO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "5188c83d-99b4-4f35-9096-7c4fff122b44",
+                "sourceTableId": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+                "columns": [
+                  {
+                    "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+                    "name": "cod_instrumento",
+                    "type": "VARCHAR(n)"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 144
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "65c1f3d7-6398-4ab0-a8e5-e179e33b7f78",
+        "type": "Table",
+        "position": {
+          "x": -900,
+          "y": 400
+        },
+        "data": {
+          "label": "ALQUILA",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "70937cbe-096e-4d6e-86e8-76df901ae290",
+              "name": "fecha_entrega",
+              "type": "DATE",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "1b3c92cb-996e-47a1-98ce-527f098e8c35",
+              "name": "fecha_devolucion",
+              "type": "DATE",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "32f263c0-9b07-4432-9cea-a68e11fd284d",
+              "name": "seguro_efectivo",
+              "type": "DECIMAL",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+              "name": "fk_CLIENTE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "6f946bcd-23e0-468d-b685-78e03d44e083",
+                "sourceTableId": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+                "columns": [
+                  {
+                    "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+                    "name": "dni_cliente",
+                    "type": "VARCHAR(n)"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+              "name": "fk_INSTRUMENTO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "1e4ff32e-07ca-42e4-96ed-6734d7002b35",
+                "sourceTableId": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+                "columns": [
+                  {
+                    "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+                    "name": "cod_instrumento",
+                    "type": "VARCHAR(n)"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 170
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "649ecf00-efaf-43de-ae46-d0b4c933b4b1",
+        "type": "Table",
+        "position": {
+          "x": 350,
+          "y": 400
+        },
+        "data": {
+          "label": "VENDE",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "fk_fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+              "name": "fk_VENDEDOR",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "688e8791-f819-43e9-9fc8-cb8c0775896b",
+                "sourceTableId": "a496413e-e9f8-4bc0-b469-3aa2667a4779",
+                "columns": [
+                  {
+                    "id": "fk_fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+                    "name": "fk_EMPLEADO",
+                    "type": "None"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+              "name": "fk_INSTRUMENTO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "8f4fc856-9dbe-4aa9-b808-99effbb8421d",
+                "sourceTableId": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+                "columns": [
+                  {
+                    "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+                    "name": "cod_instrumento",
+                    "type": "VARCHAR(n)"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 92
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "9dc4dddd-7692-4feb-936f-0248f9980e90",
+        "type": "Table",
+        "position": {
+          "x": 900,
+          "y": 400
+        },
+        "data": {
+          "label": "SERVICIO_TECNICO",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "01df5458-6b6f-4c11-a19f-11e80522bce3",
+              "name": "fecha_ingreso",
+              "type": "DATE",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "1f1880ec-a568-4237-ac47-c24271157e3a",
+              "name": "instrumento",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "58a6f5db-efe9-4548-bb77-265216168971",
+              "name": "tipo_reparacion",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "acb56592-5426-47d9-8063-3680421781c5",
+              "name": "tiempo_estimado",
+              "type": "VARCHAR(n)",
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+              "name": "fk_CLIENTE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "598002b6-6916-499f-909f-1077d21d3618",
+                "sourceTableId": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+                "columns": [
+                  {
+                    "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+                    "name": "dni_cliente",
+                    "type": "VARCHAR(n)"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "fk_fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+              "name": "fk_TECNICO",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "73c0cedd-ee4b-4693-95a5-5b328617962e",
+                "sourceTableId": "4e0831fe-a6e4-45c6-93c0-ad57d3c5bdc9",
+                "columns": [
+                  {
+                    "id": "fk_fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+                    "name": "fk_EMPLEADO",
+                    "type": "None"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 196
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "1aec6386-fe47-4711-a272-e00ab87306bf->a496413e-e9f8-4bc0-b469-3aa2667a4779_49e042e3-b4e9-4eea-90ff-52ca7394ac67",
+        "type": "Relational",
+        "source": "1aec6386-fe47-4711-a272-e00ab87306bf",
+        "targetHandle": "foreign-key-handle-49e042e3-b4e9-4eea-90ff-52ca7394ac67",
+        "target": "a496413e-e9f8-4bc0-b469-3aa2667a4779",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "49e042e3-b4e9-4eea-90ff-52ca7394ac67",
+            "sourceTableId": "1aec6386-fe47-4711-a272-e00ab87306bf",
+            "columns": [
+              {
+                "id": "fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+                "name": "dni_empleado",
+                "type": "VARCHAR(n)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "1aec6386-fe47-4711-a272-e00ab87306bf->4e0831fe-a6e4-45c6-93c0-ad57d3c5bdc9_438495d0-eca4-453e-8f42-4268b90b528c",
+        "type": "Relational",
+        "source": "1aec6386-fe47-4711-a272-e00ab87306bf",
+        "targetHandle": "foreign-key-handle-438495d0-eca4-453e-8f42-4268b90b528c",
+        "target": "4e0831fe-a6e4-45c6-93c0-ad57d3c5bdc9",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "438495d0-eca4-453e-8f42-4268b90b528c",
+            "sourceTableId": "1aec6386-fe47-4711-a272-e00ab87306bf",
+            "columns": [
+              {
+                "id": "fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+                "name": "dni_empleado",
+                "type": "VARCHAR(n)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "cf45fc38-90ab-4642-8901-417fd7cff9a4->f48b7a52-6330-4191-b412-9e81b3b9a326_1b672187-723e-4e19-b25d-cee5e50b8cfd",
+        "type": "Relational",
+        "source": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+        "targetHandle": "foreign-key-handle-1b672187-723e-4e19-b25d-cee5e50b8cfd",
+        "target": "f48b7a52-6330-4191-b412-9e81b3b9a326",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "1b672187-723e-4e19-b25d-cee5e50b8cfd",
+            "sourceTableId": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+            "columns": [
+              {
+                "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+                "name": "dni_cliente",
+                "type": "VARCHAR(n)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f->f48b7a52-6330-4191-b412-9e81b3b9a326_5188c83d-99b4-4f35-9096-7c4fff122b44",
+        "type": "Relational",
+        "source": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+        "targetHandle": "foreign-key-handle-5188c83d-99b4-4f35-9096-7c4fff122b44",
+        "target": "f48b7a52-6330-4191-b412-9e81b3b9a326",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "5188c83d-99b4-4f35-9096-7c4fff122b44",
+            "sourceTableId": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+            "columns": [
+              {
+                "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+                "name": "cod_instrumento",
+                "type": "VARCHAR(n)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "cf45fc38-90ab-4642-8901-417fd7cff9a4->65c1f3d7-6398-4ab0-a8e5-e179e33b7f78_6f946bcd-23e0-468d-b685-78e03d44e083",
+        "type": "Relational",
+        "source": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+        "targetHandle": "foreign-key-handle-6f946bcd-23e0-468d-b685-78e03d44e083",
+        "target": "65c1f3d7-6398-4ab0-a8e5-e179e33b7f78",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "6f946bcd-23e0-468d-b685-78e03d44e083",
+            "sourceTableId": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+            "columns": [
+              {
+                "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+                "name": "dni_cliente",
+                "type": "VARCHAR(n)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f->65c1f3d7-6398-4ab0-a8e5-e179e33b7f78_1e4ff32e-07ca-42e4-96ed-6734d7002b35",
+        "type": "Relational",
+        "source": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+        "targetHandle": "foreign-key-handle-1e4ff32e-07ca-42e4-96ed-6734d7002b35",
+        "target": "65c1f3d7-6398-4ab0-a8e5-e179e33b7f78",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "1e4ff32e-07ca-42e4-96ed-6734d7002b35",
+            "sourceTableId": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+            "columns": [
+              {
+                "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+                "name": "cod_instrumento",
+                "type": "VARCHAR(n)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "a496413e-e9f8-4bc0-b469-3aa2667a4779->649ecf00-efaf-43de-ae46-d0b4c933b4b1_688e8791-f819-43e9-9fc8-cb8c0775896b",
+        "type": "Relational",
+        "source": "a496413e-e9f8-4bc0-b469-3aa2667a4779",
+        "targetHandle": "foreign-key-handle-688e8791-f819-43e9-9fc8-cb8c0775896b",
+        "target": "649ecf00-efaf-43de-ae46-d0b4c933b4b1",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "688e8791-f819-43e9-9fc8-cb8c0775896b",
+            "sourceTableId": "a496413e-e9f8-4bc0-b469-3aa2667a4779",
+            "columns": [
+              {
+                "id": "fk_fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+                "name": "fk_EMPLEADO",
+                "type": "None"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f->649ecf00-efaf-43de-ae46-d0b4c933b4b1_8f4fc856-9dbe-4aa9-b808-99effbb8421d",
+        "type": "Relational",
+        "source": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+        "targetHandle": "foreign-key-handle-8f4fc856-9dbe-4aa9-b808-99effbb8421d",
+        "target": "649ecf00-efaf-43de-ae46-d0b4c933b4b1",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "8f4fc856-9dbe-4aa9-b808-99effbb8421d",
+            "sourceTableId": "6e44c41a-b90c-49a4-9ce8-84a5e403ec8f",
+            "columns": [
+              {
+                "id": "fk_b85134d4-42c8-4239-8eec-e6c2a0c2db5d",
+                "name": "cod_instrumento",
+                "type": "VARCHAR(n)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "cf45fc38-90ab-4642-8901-417fd7cff9a4->9dc4dddd-7692-4feb-936f-0248f9980e90_598002b6-6916-499f-909f-1077d21d3618",
+        "type": "Relational",
+        "source": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+        "targetHandle": "foreign-key-handle-598002b6-6916-499f-909f-1077d21d3618",
+        "target": "9dc4dddd-7692-4feb-936f-0248f9980e90",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "598002b6-6916-499f-909f-1077d21d3618",
+            "sourceTableId": "cf45fc38-90ab-4642-8901-417fd7cff9a4",
+            "columns": [
+              {
+                "id": "fk_4a67274f-d9b5-4135-abec-175457fe1da5",
+                "name": "dni_cliente",
+                "type": "VARCHAR(n)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "4e0831fe-a6e4-45c6-93c0-ad57d3c5bdc9->9dc4dddd-7692-4feb-936f-0248f9980e90_73c0cedd-ee4b-4693-95a5-5b328617962e",
+        "type": "Relational",
+        "source": "4e0831fe-a6e4-45c6-93c0-ad57d3c5bdc9",
+        "targetHandle": "foreign-key-handle-73c0cedd-ee4b-4693-95a5-5b328617962e",
+        "target": "9dc4dddd-7692-4feb-936f-0248f9980e90",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "73c0cedd-ee4b-4693-95a5-5b328617962e",
+            "sourceTableId": "4e0831fe-a6e4-45c6-93c0-ad57d3c5bdc9",
+            "columns": [
+              {
+                "id": "fk_fk_f5f035d4-c037-4f62-a472-804131fe22b6",
+                "name": "fk_EMPLEADO",
+                "type": "None"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": 400,
+      "y": 300,
+      "zoom": 0.5
+    }
+  },
+  "name": "Sonora Instrumentos - Relational Schema",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 390605
+  },
+  "id": 900001,
+  "updatedAtTimestamp": 1790177947
+}
