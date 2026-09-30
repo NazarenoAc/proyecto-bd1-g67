@@ -1,3 +1,6 @@
+CREATE DATABASE SonoraInstrumentos;
+USE SonoraInstrumentos;
+
 CREATE TABLE Marca (
     id_marca     INT IDENTITY(1,1) CONSTRAINT PK_Marca PRIMARY KEY,
     nombre_marca VARCHAR(50) NOT NULL CONSTRAINT UQ_Marca_nombre UNIQUE
@@ -50,7 +53,7 @@ CREATE TABLE Empleado (
     nombre       VARCHAR(50) NOT NULL,
     apellido     VARCHAR(50) NOT NULL,
     num_telefono VARCHAR(20) NOT NULL,
-    rol          CHAR(100) NOT NULL CONSTRAINT CK_Empleado_rol CHECK (rol IN ('VENDENDOR','TECNICO')),
+    rol          CHAR(100) NOT NULL CONSTRAINT CK_Empleado_rol CHECK (rol IN ('VENDEDOR','TECNICO')),
     CONSTRAINT UQ_Empleado_dni_rol UNIQUE (dni_empleado, rol)
 );
 
