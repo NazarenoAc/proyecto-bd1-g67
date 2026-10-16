@@ -10,8 +10,6 @@ Cuánto vendió cada vendedor en un período: cantidad de ventas, monto total y 
 | 30000003 | Diego Ortiz | 1 | 640000.00 | 2026-01-20 11:10 | 2026-01-20 11:10 |
 | 30000005 | Martín Ríos | 1 | 620000.00 | 2026-03-01 09:40 | 2026-03-01 09:40 |
 
-![Ventas por vendedor](imagenes/informe-venta.png)
-
 Primero una subconsulta calcula el total de cada venta, así una venta con varios renglones cuenta una sola vez, y después se agrupa por vendedor con COUNT, SUM, MIN y MAX. El rango termina en "menor a 01/04" y no en "hasta 31/03" porque fecha_venta guarda también la hora y una venta del 31 a la tarde quedaría afuera.
 
 Para comprobarlo: Carlos Méndez atendió la venta 1 (850.000) y la 4 (1.200.000), que dan 2.050.000. Laura Paz atendió la 2 (2 x 420.000 = 840.000) y la 7 (780.000), que dan 1.620.000. La columna cant_ventas suma 7, que son las ventas 1 a 7. La 8 es del 5 de abril y queda afuera.

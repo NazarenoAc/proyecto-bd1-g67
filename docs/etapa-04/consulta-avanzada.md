@@ -9,7 +9,6 @@ Qué instrumentos tienen un precio por encima del promedio del catálogo y ya se
 | 2 | Guitarra Les Paul Standard | Guitarras | Gibson | 1200000.00 | 1 |
 | 6 | Batería acústica Export | Baterías | Pearl | 950000.00 | 1 |
 
-![Instrumentos sobre el precio promedio](imagenes/consulta-avanzada.png)
 
 Une cuatro tablas (Instrumento, Categoria, Marca y DetalleVenta) y filtra con una subconsulta, `precio > (SELECT AVG(precio) FROM Instrumento)`. Después agrupa por instrumento y suma las cantidades vendidas.
 

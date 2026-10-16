@@ -9,7 +9,6 @@ La probamos con la venta 10 porque es una de las que tiene más de un instrument
 | 10 | 2026-05-10 19:00 | Lucía Herrera | Florencia Luna | Transferencia | Guitarra Stratocaster | 1 | 850000.00 | 850000.00 | 850000.00 |
 | 10 | 2026-05-10 19:00 | Lucía Herrera | Florencia Luna | Transferencia | Teclado PSR-E373 | 1 | 420000.00 | 420000.00 | 1270000.00 |
 
-![Comprobante de la venta 10](imagenes/comprobante-venta.png)
 
 El subtotal es cantidad por precio unitario. El total acumulado lo sacamos con una subconsulta que suma los renglones de esa misma venta hasta el instrumento de la fila, así que el último renglón queda con el total de la factura.
 
