@@ -7,12 +7,12 @@
 -- Reporte agregado (ventas por vendedor, 1/1 al 31/3/2026)
 SELECT '2026-01-01' AS desde, '2026-03-31' AS hasta,
        e.dni_empleado, e.nombre + ' ' + e.apellido AS vendedor,
-       COUNT() AS cant_ventas,
+       COUNT(*) AS cant_ventas,
        SUM(t.total_venta) AS total_vendido,
        MIN(t.fecha_venta) AS primera_venta,
        MAX(t.fecha_venta) AS ultima_venta
 FROM (SELECT v.id_venta,v.dni_vendedor,v.fecha_venta,
-             SUM(dv.cantidad dv.precio_unitario) AS total_venta
+             SUM(dv.cantidad * dv.precio_unitario) AS total_venta
       FROM Venta v
       JOIN DetalleVenta dv ON dv.id_venta = v.id_venta
       WHERE v.fecha_venta >='20260101' AND v.fecha_venta < '20260401'
