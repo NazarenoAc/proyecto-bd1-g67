@@ -1,5 +1,7 @@
 CREATE DATABASE SonoraInstrumentos;
+GO
 USE SonoraInstrumentos;
+GO
 
 CREATE TABLE Marca (
     id_marca     INT IDENTITY(1,1) CONSTRAINT PK_Marca PRIMARY KEY,

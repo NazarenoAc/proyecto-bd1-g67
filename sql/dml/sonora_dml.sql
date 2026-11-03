@@ -1,3 +1,6 @@
+USE SonoraInstrumentos;
+GO
+
 INSERT INTO Marca (nombre_marca) VALUES
 ('Yamaha'),('Fender'),('Gibson'),('Roland'),('Ibanez'),('Casio'),('Pearl'),('Korg');
  
