@@ -132,8 +132,6 @@ BEGIN
         THROW 50020, N'Operación no permitida: las ventas no se pueden eliminar para preservar el historial comercial.', 1;
 END;
 GO
-
-
 -- PRUEBAS
 
 -- Prueba 1: cambio de precio de la Stratocaster (cod 1)
